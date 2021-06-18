@@ -1,22 +1,29 @@
+// Module Import
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { AuthModule } from '@auth0/auth0-angular';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
-import { LoginFormComponent } from './components/login-form/login-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// component imports
+import { AppComponent } from './app.component';
+import { AuthButtonComponent } from './components/auth-button/auth-button.component';
+
+// environment import
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationFormComponent,
-    LoginFormComponent
-  ],
+    AuthButtonComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AuthModule.forRoot({
+      domain: environment.domain,
+      clientId: environment.clientId
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,13 +13,6 @@
 <!-- Display Authorization Form (Login/Registration) -->
 <ng-template #userAuthForm>
 
-  <!-- Display The Login Form Initially -->
-  <div *ngIf="loginSelected; else userLoginForm">
-    <app-login-form></app-login-form>
-  </div>
+  <app-auth-button></app-auth-button>
   
-  <!-- Display The Registration Form If Selected -->
-  <ng-template #userLoginForm>
-    <app-registration-form></app-registration-form>
-  </ng-template>
 </ng-template>
