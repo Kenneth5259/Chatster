@@ -5,14 +5,16 @@
 
 -->
 
-<!-- Check if the user is authorized -->
-<div *ngIf="isAuthorized; else userAuthForm">
+<!-- Always display main header/navbar-->
+<app-header></app-header>
 
-</div>
+<!-- Verify that the user is authenticated-->
+<ng-container *ngIf="auth.isAuthenticated$ | async; else homepage">
 
-<!-- Display Authorization Form (Login/Registration) -->
-<ng-template #userAuthForm>
+  <!-- Display the chat options for the user-->
+  <h1>Chat Coming Soon!</h1>
+</ng-container>
 
-  <app-auth-button></app-auth-button>
-  
+<ng-template #homepage>
+  <h1>Homepage Coming Soon!</h1>
 </ng-template>
