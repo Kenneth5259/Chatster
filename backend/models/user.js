@@ -1,3 +1,4 @@
+const conn = require('../middleware/connection');
 class User {
     id;
     firstName;
@@ -6,7 +7,11 @@ class User {
     password;
 }
 
+const createNewUser = () => {
+
+};
 
 module.exports = [
-    User
+    User,
+    createNewUser
 ];
