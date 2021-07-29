@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   clientId: 'nfz4CjD2wKjGMW5xmoWITa45FSqxg3sb',
-  domain: 'dev-4sr9i07q.us.auth0.com'
+  domain: 'dev-4sr9i07q.us.auth0.com',
+  apiUrl: 'http://localhost:80/'
 };
 
 /*
